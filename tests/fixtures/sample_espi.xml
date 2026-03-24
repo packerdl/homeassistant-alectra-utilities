@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>urn:uuid:test-feed</id>
+  <title>Green Button Usage Feed</title>
+  <entry>
+    <id>urn:uuid:reading-type-hourly</id>
+    <content>
+      <ReadingType xmlns="http://naesb.org/espi">
+        <powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <flowDirection>1</flowDirection>
+        <accumulationBehaviour>4</accumulationBehaviour>
+        <uom>72</uom>
+        <currency>124</currency>
+        <intervalLength>3600</intervalLength>
+      </ReadingType>
+    </content>
+    <link rel="self" href="https://example.com/ReadingType/RT_HOURLY" type="espi-entry/ReadingType" />
+  </entry>
+  <entry>
+    <id>urn:uuid:reading-type-register</id>
+    <content>
+      <ReadingType xmlns="http://naesb.org/espi">
+        <powerOfTenMultiplier>0</powerOfTenMultiplier>
+        <flowDirection>1</flowDirection>
+        <accumulationBehaviour>1</accumulationBehaviour>
+        <uom>72</uom>
+        <currency>124</currency>
+        <intervalLength>86400</intervalLength>
+      </ReadingType>
+    </content>
+    <link rel="self" href="https://example.com/ReadingType/RT_REGISTER" type="espi-entry/ReadingType" />
+  </entry>
+  <entry>
+    <id>urn:uuid:meter-reading-hourly</id>
+    <content>
+      <MeterReading xmlns="http://naesb.org/espi" />
+    </content>
+    <link rel="related" href="https://example.com/ReadingType/RT_HOURLY" type="espi-entry/ReadingType" />
+  </entry>
+  <entry>
+    <id>urn:uuid:interval-block-1</id>
+    <content>
+      <IntervalBlock xmlns="http://naesb.org/espi">
+        <IntervalReading>
+          <timePeriod>
+            <duration>3600</duration>
+            <start>1735689600</start>
+          </timePeriod>
+          <value>500</value>
+          <cost>7500</cost>
+        </IntervalReading>
+        <IntervalReading>
+          <timePeriod>
+            <duration>3600</duration>
+            <start>1735693200</start>
+          </timePeriod>
+          <value>750</value>
+          <cost>11250</cost>
+        </IntervalReading>
+      </IntervalBlock>
+    </content>
+  </entry>
+  <entry>
+    <id>urn:uuid:meter-reading-register</id>
+    <content>
+      <MeterReading xmlns="http://naesb.org/espi" />
+    </content>
+    <link rel="related" href="https://example.com/ReadingType/RT_REGISTER" type="espi-entry/ReadingType" />
+  </entry>
+  <entry>
+    <id>urn:uuid:interval-block-register</id>
+    <content>
+      <IntervalBlock xmlns="http://naesb.org/espi">
+        <IntervalReading>
+          <timePeriod>
+            <duration>0</duration>
+            <start>1735689600</start>
+          </timePeriod>
+          <value>50000</value>
+        </IntervalReading>
+      </IntervalBlock>
+    </content>
+  </entry>
+</feed>

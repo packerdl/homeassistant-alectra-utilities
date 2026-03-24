@@ -1,0 +1,5 @@
+pytest
+pytest-homeassistant-custom-component
+pytest-asyncio
+defusedxml>=0.7.1
+

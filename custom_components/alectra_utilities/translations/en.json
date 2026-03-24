@@ -1,0 +1,35 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Alectra Utilities",
+        "description": "Enter the credentials from your Alectra utility bill. If using the Alectra Scraper add-on, find the sidecar URL in the add-on info page.",
+        "data": {
+          "sidecar_url": "Scraper sidecar URL",
+          "account_name": "Account Name",
+          "account_number": "Account Number",
+          "phone_number": "Phone Number",
+          "sidecar_token": "Sidecar Token (optional)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to the scraper service. Verify the sidecar URL and that the service is running.",
+      "invalid_auth": "Invalid credentials. Verify your account name, number, and phone number.",
+      "unknown": "Unexpected error. Check the logs for details."
+    },
+    "abort": {
+      "already_configured": "Alectra Utilities is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Alectra Utilities Options",
+        "data": {
+          "update_interval_hours": "Update interval (hours)"
+        }
+      }
+    }
+  }
+}
