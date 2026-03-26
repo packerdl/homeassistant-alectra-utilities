@@ -1,11 +1,13 @@
 services:
   alectra-scraper:
+    image: packerdl/ha-alectra-scraper:latest
     build: ./alectra_scraper
     ports:
       - "127.0.0.1:8080:8080"
     environment:
-      # Optional shared secret. Set SIDECAR_TOKEN in a .env file or shell
-      # environment, then configure the same value in the HA integration.
+      # Optional shared secret. When empty, all requests are accepted without
+      # authentication. Set SIDECAR_TOKEN in a .env file or shell environment,
+      # then configure the same value in the HA integration.
       - SIDECAR_TOKEN=${SIDECAR_TOKEN:-}
     volumes:
       - ./screenshots:/screenshots

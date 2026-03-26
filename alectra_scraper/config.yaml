@@ -1,6 +1,7 @@
 name: "Alectra Utilities Scraper"
 version: "1.0.0"
 slug: alectra_scraper
+image: "packerdl/ha-alectra-scraper"
 description: "Playwright sidecar that scrapes electricity usage data from the Alectra Green Button portal"
 arch:
   - amd64
