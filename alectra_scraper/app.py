@@ -26,6 +26,12 @@ async def _verify_token(x_sidecar_token: str = Header(default="")) -> None:
 
 app = FastAPI()
 
+
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+
+
 _scrape_lock = asyncio.Lock()
 
 
